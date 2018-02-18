@@ -1,0 +1,12 @@
+	AREA	Armexample, CODE
+	ENTRY
+		MOV r1, #5
+		MOV r2, #5
+		CMP r1, r2
+		BEQ THENPART
+		ADD r3, r1, r2
+		B	STOP
+THENPART
+		SUB r3, r1, r2
+STOP	B	STOP
+	END

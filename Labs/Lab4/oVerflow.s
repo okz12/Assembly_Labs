@@ -1,0 +1,11 @@
+	AREA	ArmExample, CODE
+	ENTRY
+		MOV r0, #0xF0000000
+		MOV r1, #0x10000000
+		ADDS r4, r1, r0
+		BCS	V_Val
+STOP	B	STOP
+V_Val
+		MOV r0, #1
+	
+	END

@@ -1,0 +1,7 @@
+	AREA	ArmLabels, CODE
+	ENTRY
+		MOV r0, #0
+LOADME	ADD	r0,	r0,	#1
+		LDR	r15,	=LOADME
+STOP	B	STOP
+	END

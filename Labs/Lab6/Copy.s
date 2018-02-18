@@ -1,0 +1,14 @@
+	AREA	ArmLabels, CODE
+	ENTRY
+		ADR r1, TABLE1
+		LDR r2, =0xFFFFFF00
+LOOP	LDR r0, [r1,r4]
+		STR	r0, [r2,r4]
+		ADD r4, r4, #4
+		CMP r4, #16
+		BNE LOOP
+STOP	B	STOP
+
+TABLE1	DCD 5, 0x10, 3
+	END
+		

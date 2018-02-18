@@ -1,0 +1,16 @@
+	AREA	ArmExample, CODE
+	ENTRY
+		MOV r0, #0xF0000000
+		MOV r1, #0xC000
+		MOV r2, #0x10000000
+		MOV r3, #0x0
+		ADDS r4, r2, r0
+		BCC	ADD_MSW_SETC
+		ADDS r3, r3, #1
+		BCC ADD_MSW_SETC
+		ADD r5, r3, r1	
+STOP	B	STOP
+ADD_MSW_SETC
+		ADDS r5, r3, r1
+	
+	END
